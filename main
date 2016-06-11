@@ -1,0 +1,21 @@
+#!/usr/bin/python3.5
+import os
+import time
+
+while True:
+    choice = input(
+            "1. Get information\n" +
+            "Q. Quit\n\n" +
+            "Choose what action you want to perform: ")
+    print()
+
+    if choice == "Q":
+        print("Quitting.")
+        break
+    elif choice == "1":
+        os.system("./tasks/lanstats")
+    else:
+        print("Option {} is not valid. Please try again.".format(choice))
+
+    print()
+    time.sleep(1)
