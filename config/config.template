@@ -1,5 +1,5 @@
 [Server]
-url: 'https://www.areafiftylan.nl/api/v1'
+url: 'http://localhost:9000/api/v1'
 
 [Credentials]
 username: 'username'
