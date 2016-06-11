@@ -5,8 +5,20 @@ import time
 while True:
     choice = input(
             "1. Get information\n" +
+            "2. Get emails from users with an account\n" +
+            "3. Get emails from users with a ticket\n" +
+            "4. Get emails from users without a ticket\n" +
+            "5. Get amount of tickets a user bought\n" +
+            "6. Get seats with owners\n" +
+            "7. Get all pickup addresses\n" +
+            "8. Add a consumption\n" +
+            "9. Delete a team\n" +
+            "10. Reserve a seat for a ticket\n" +
+            "11. Reserve a seat without a ticket\n" +
+            "12. Reserve a seat for a ticket and remove the current owner\n" +
+            "13. Reserve an entire seatgroup without a ticket\n" +
             "Q. Quit\n\n" +
-            "Choose what action you want to perform: ")
+            "What would you like to do: ")
     print()
 
     if choice == "Q":
@@ -14,6 +26,30 @@ while True:
         break
     elif choice == "1":
         os.system("./tasks/lanstats")
+    elif choice == "2":
+        os.system("./tasks/usersmails")
+    elif choice == "3":
+        os.system("./tasks/userstickets")
+    elif choice == "4":
+        os.system("./tasks/userswithoutticket")
+    elif choice == "5":
+        os.system("./tasks/usersorders")
+    elif choice == "6":
+        os.system("./tasks/usersseats")
+    elif choice == "7":
+        os.system("./tasks/ticketpickup")
+    elif choice == "8":
+        os.system("./tasks/addconsumption")
+    elif choice == "9":
+        os.system("./tasks/deleteteam")
+    elif choice == "10":
+        os.system("./tasks/reserveseat")
+    elif choice == "11":
+        os.system("./tasks/reserveseatnoticket")
+    elif choice == "12":
+        os.system("./tasks/reserveseatdropowner")
+    elif choice == "13":
+        os.system("./tasks/reserveseatgroupnoticket")
     else:
         print("Option {} is not valid. Please try again.".format(choice))
 
