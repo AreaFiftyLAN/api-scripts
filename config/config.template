@@ -1,0 +1,6 @@
+[Server]
+url: 'https://www.areafiftylan.nl/api/v1'
+
+[Credentials]
+username: 'username'
+password: 'password'
