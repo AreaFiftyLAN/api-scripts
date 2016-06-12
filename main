@@ -17,6 +17,8 @@ while True:
             "11. Reserve a seat without a ticket\n" +
             "12. Reserve a seat for a ticket and remove the current owner\n" +
             "13. Reserve an entire seatgroup without a ticket\n" +
+            "14. Add a seatgroup to the seat layout\n" +
+            "15. Add all the seatgroups (edit for personal layout)\n" +
             "Q. Quit\n\n" +
             "What would you like to do: ")
     print()
@@ -50,6 +52,10 @@ while True:
         os.system("./tasks/reserveseatdropowner")
     elif choice == "13":
         os.system("./tasks/reserveseatgroupnoticket")
+    elif choice == "14":
+        os.system("./tasks/addseatgroup")
+    elif choice == "15":
+        os.system("./tasks/addallseatgroups")
     else:
         print("Option {} is not valid. Please try again.".format(choice))
 
