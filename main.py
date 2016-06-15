@@ -1,5 +1,6 @@
 import os
 import time
+from subprocess import call
 
 while True:
     choice = input(
@@ -26,35 +27,35 @@ while True:
         print("Quitting.")
         break
     elif choice == "1":
-        os.system("tasks/lanstats")
+        call(["python3.5", "tasks/lanstats.py"])
     elif choice == "2":
-        os.system("tasks/usersmails")
+        call(["python3.5", "tasks/usersmails.py"])
     elif choice == "3":
-        os.system("tasks/userstickets")
+        call(["python3.5", "tasks/userstickets.py"])
     elif choice == "4":
-        os.system("tasks/userswithoutticket")
+        call(["python3.5", "tasks/userswithoutticket.py"])
     elif choice == "5":
-        os.system("tasks/usersorders")
+        call(["python3.5", "tasks/usersorders.py"])
     elif choice == "6":
-        os.system("tasks/usersseats")
+        call(["python3.5", "tasks/usersseats.py"])
     elif choice == "7":
-        os.system("tasks/ticketpickup")
+        call(["python3.5", "tasks/ticketpickup.py"])
     elif choice == "8":
-        os.system("tasks/addconsumption")
+        call(["python3.5", "tasks/addconsumption.py"])
     elif choice == "9":
-        os.system("tasks/deleteteam")
+        call(["python3.5", "tasks/deleteteam.py"])
     elif choice == "10":
-        os.system("tasks/reserveseat")
+        call(["python3.5", "tasks/reserveseat.py"])
     elif choice == "11":
-        os.system("tasks/reserveseatnoticket")
+        call(["python3.5", "tasks/reserveseatnoticket.py"])
     elif choice == "12":
-        os.system("tasks/reserveseatdropowner")
+        call(["python3.5", "tasks/reserveseatdropowner.py"])
     elif choice == "13":
-        os.system("tasks/reserveseatgroupnoticket")
+        call(["python3.5", "tasks/reserveseatgroupnoticket.py"])
     elif choice == "14":
-        os.system("tasks/addseatgroup")
+        call(["python3.5", "tasks/addseatgroup.py"])
     elif choice == "15":
-        os.system("tasks/addallseatgroups")
+        call(["python3.5", "tasks/addallseatgroups.py"])
     else:
         print("Option {} is not valid. Please try again.".format(choice))
 
