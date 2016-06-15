@@ -12,7 +12,7 @@ s = connection.connect()
 
 # Gets input from the user
 choice = input("Are you sure you want to add all seatgroups? [Yes]")
-if choice =="Yes":
+if choice == "Yes":
     print("Adding all seatgroups")
     for group in ['A', 'B', 'C', 'D', 'E']:
         seats = 16
@@ -20,6 +20,7 @@ if choice =="Yes":
                 'seatGroupName': group,
                 'numberOfSeats': seats
         }
+        print(payload)
         response = s.post(baseUrl + "/seats", json=payload)
         if response.json()["status"] == '200':
             print("Successfully added seatgroup {} with {} seats.".format(group, seats))
