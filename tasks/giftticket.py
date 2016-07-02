@@ -11,7 +11,7 @@ baseUrl = config.get("Server", "Url")
 s = connection.connect()
 
 # Gets input from the user
-user = input("The ticket recipient: ")
+user = input("The userId from the recipient: ")
 
 pickupstring = input("Should the ticket have pickup? [Yes]: ")
 if pickupstring == "Yes":
@@ -25,7 +25,7 @@ if chmemberstring == "Yes":
 else:
     chmember = False
 
-choice = input("Are you sure you want to gift a ticket to user {} with options [pickup: {}, chmember:{}]? [Yes]: ".format(user, pickup, chmember))
+choice = input("Are you sure you want to gift a ticket to user {} with options [pickup: {}, discount:{}]? [Yes]: ".format(user, pickup, chmember))
 if choice == "Yes":
     data = {
         "pickupService": pickup,
@@ -35,7 +35,7 @@ if choice == "Yes":
     order = s.post(baseUrl + "/users/{}/orders".format(user) , json=data)
     response = s.post(baseUrl + "/orders/{}/approve".format(order.json()["object"]["id"]))
     if response.json()["status"] == '200':
-        print("Successfully gifted ticket to user {} with options [pickup: {}, chmember:{}].".format(user, pickup, chmember))
+        print("Successfully gifted ticket to user {} with options [pickup: {}, discount:{}].".format(user, pickup, chmember))
     else:
         print(response.json())
 else:
