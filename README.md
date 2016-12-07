@@ -3,6 +3,7 @@ This repository contains all kinds of handy functions to use on the [lancie-api]
 
 ##Usage
 To use the script, you will need [python3.5](https://www.python.org/). The main file can be executed with the command `python3.5 main.py`.
+you also need to run `pip install requests` once after installation. 
 
 ##Config
 The script uses a config file which is located under `./config/config`. A template file can be found in the `./config` folder.
