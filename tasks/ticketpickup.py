@@ -12,6 +12,6 @@ s = connection.connect()
 # Send request to retrieve orders
 tickets = s.get(baseUrl + "/tickets/transport").json()
 for ticket in tickets:
-        owner = ticket['owner']['profile']
-        print(owner['firstName'] + ',' + owner['lastName'] + ',' + owner['address'] + ',' + owner['city'] + ',' + owner['zipcode'] + ',' + owner['phoneNumber'] + ',' + ticket['owner']['email'])
+        profile = ticket['owner']['profile']
+        print(profile['firstName'] + ',' + profile['lastName'] + ',' + profile['address'] + ',' + profile['city'] + ',' + profile['zipcode'] + ',' + profile['phoneNumber'] + ',' + ticket['owner']['username'])
 

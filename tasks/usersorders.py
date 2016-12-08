@@ -11,4 +11,4 @@ baseUrl = config.get("Server", "Url")
 s = connection.connect()
 # Send request to retrieve orders
 orders = s.get(baseUrl + "/orders")
-[print("{}, {}, {}".format(order["user"]["username"], order["user"]["email"], len(order["tickets"]))) for order in orders.json()]
+[print("{}, {}, {}".format(order["user"]["username"], len(order["tickets"]))) for order in orders.json()]

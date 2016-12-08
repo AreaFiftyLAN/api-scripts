@@ -14,5 +14,5 @@ tickets = s.get(baseUrl + "/tickets").json()
 for ticket in tickets:
     if (ticket['valid']):
 #        print(ticket['owner']['username'] + ', ' + ticket['owner']['email'])
-        print(ticket['owner']['email'])
+        print(ticket['owner']['username'])
 
