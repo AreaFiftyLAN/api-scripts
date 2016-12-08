@@ -20,6 +20,7 @@ while True:
             "14. Add a seatgroup to the seat layout\n" +
             "15. Add all the seatgroups (edit for personal layout)\n" +
             "16. Gift a ticket to a user\n" +
+            "17. Count all consumptions made\n" +
             "Q. Quit\n\n" +
             "What would you like to do: ")
     print()
@@ -59,6 +60,8 @@ while True:
         call(["python3.5", "tasks/addallseatgroups.py"])
     elif choice == "16":
         call(["python3.5", "tasks/giftticket.py"])
+    elif choice == "17":
+        call(["python3.5", "tasks/countconsumptions.py"])
     else:
         print("Option {} is not valid. Please try again.".format(choice))
 
