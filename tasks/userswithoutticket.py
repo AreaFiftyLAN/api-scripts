@@ -11,9 +11,9 @@ baseUrl = config.get("Server", "Url")
 s = connection.connect()
 # Send request to retrieve orders
 tickets = s.get(baseUrl + "/tickets").json()
-mails = [ticket['owner']['email'] for ticket in tickets]
+mails = [ticket['owner']['username'] for ticket in tickets]
 users = s.get(baseUrl + "/users").json()
 for user in users:
-    if not user['email'] in mails:
-        print(user['email'])
+    if not user['username'] in mails:
+        print(user['username'])
 
